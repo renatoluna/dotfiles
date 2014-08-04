@@ -1,0 +1,28 @@
+[color]
+	branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
+    ui = auto
+    [apply]
+    # Detect whitespace errors when applying a patch
+    whitespace = fix
+[core]
+    whitespace = space-before-tab,indent-with-non-tab,trailing-space
+    ui = auto
+[alias]
+    undopush = push -f origin HEAD^:master
+    unchanged = git update-index --assume-unchanged
+    st = status
+    co = checkout
+    br = branch
+    df = diff
+    dfs = diff --stat
+    ci = commit
+    changed = show --pretty="format:" --name-only
+    lg = log --graph  --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative
+    last = log -1 HEAD
+    la = "!git config -l | grep alias | cut -c 7-"
+    ours = "!f() { git co --ours $@ && git add $@; }; f"
+    theirs = "!f() { git co --theirs $@ && git add $@; }; f"
+    update = "!f() { BRANCH=$(git rev-parse --abbrev-ref HEAD); git st && git pull origin $BRANCH && git push origin $BRANCH; }; f"
