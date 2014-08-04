@@ -3,6 +3,7 @@
 VAGRANTFILE_API_VERSION = "2"
 
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
-  config.vm.box = "http://renatoluna.com/labs/environments/package.box"
-  config.vm.forward_port "http", 80, 8080
+  config.vm.box = "webdev"
+  config.vm.box_url = "http://renatoluna.com/labs/environments/package.box"
+  config.vm.network :forwarded_port, host: 8080, guest: 80
 end
