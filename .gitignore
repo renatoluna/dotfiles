@@ -1,1 +1,16 @@
 vagrant/.vagrant
+node_modules
+dist
+.tmp
+.sass-cache
+app/bower_components
+*.log
+*.sql
+*.sqlite
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
