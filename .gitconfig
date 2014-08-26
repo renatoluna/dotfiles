@@ -1,13 +1,13 @@
 [user]
-	name = Renato Luna
+    name = Renato Luna
     email = renatoluna@gmail.com
 [push]
     default = upstream
 [url "https://"]
-	insteadOf = git://
+    insteadOf = git://
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 [color]
     branch = auto
     diff = auto
