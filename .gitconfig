@@ -1,6 +1,8 @@
 [user]
 	name = Renato Luna
-	email = renatoluna@gmail.com
+    email = renatoluna@gmail.com
+[push]
+    default = upstream
 [url "https://"]
 	insteadOf = git://
 [filter "media"]
