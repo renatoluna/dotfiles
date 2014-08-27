@@ -6,3 +6,4 @@ This is my setup repository
 
 * vagrant development environment
 * .gitconfig
+* .vimrc
