@@ -1,6 +1,8 @@
 [user]
     name = Renato Luna
     email = renatoluna@gmail.com
+[pull]
+    default = upstream
 [push]
     default = upstream
 [url "https://"]
