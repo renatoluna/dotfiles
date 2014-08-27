@@ -6,8 +6,8 @@
 [url "https://"]
     insteadOf = git://
 [filter "media"]
-    clean = git-media-clean %f
-    smudge = git-media-smudge %f
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
 [color]
     branch = auto
     diff = auto
