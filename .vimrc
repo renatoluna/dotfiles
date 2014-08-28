@@ -11,7 +11,7 @@ set softtabstop=4
 set expandtab
 " Linebreak on 80 characters
 set lbr
-set tw=80
+set tw=300
 set ai "Auto indent
 set si "Smart indent
 set wrap "wrap lines
