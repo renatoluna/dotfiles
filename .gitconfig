@@ -47,3 +47,5 @@
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     # Delete all local branches merged into master
     purge = !"git branch -d $(git branch --merged master | grep -v -e '*' -e 'master')"
+[credential]
+	helper = osxkeychain
