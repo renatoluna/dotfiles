@@ -69,3 +69,10 @@ snippet MDL
 		${1:SCOPE}.${2:Module}.fn = ${2:Module}.prototype;
 		
 	)(${1:SCOPE});
+#JS SCOPE
+	(function (window, document, undefined) {
+		var ${1:SCOPE} = ${1:SCOPE} || {};
+		window.${1:SCOPE} = ${1:SCOPE};
+					
+		return window.${1:SCOPE};
+	})(this, document);
