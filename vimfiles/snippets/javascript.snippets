@@ -24,15 +24,17 @@ snippet CLASS
 			var $private = {};
 			var $protected = this;
 			var $public = $protected;
-			
-			${0}
+
+			${4://Privates and Publics...}
 
 			return $protected;
 		}
 
-		$super.${3:Class} = function {
+		$super.${3:Class} = function () {
 			return new ${3:Class}();
 		};
 
+		$super.${3:Class}.fn = ${3:Class}.prototype;
+
 		return $super.${3:Class};
-	};	
+	})(${1:SCOPE}.${2:Module});	
