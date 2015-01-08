@@ -93,6 +93,9 @@ bower_components
 *.sql
 *.sqlite
 
-####
+## SASS ##
 
 .sass-cache
+*.css.map
+
+####
