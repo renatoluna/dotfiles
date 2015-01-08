@@ -79,6 +79,12 @@ node_modules
 # Debug log from npm
 npm-debug.log
 
+## Javascript ##
+
+dist
+*.js.map
+bower_components
+
 ####
 
 dist
