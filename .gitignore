@@ -21,9 +21,12 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
+## Vagrant ##
+
+.vagrant/
+
 ####
 
-vagrant/.vagrant
 node_modules
 dist
 .tmp
