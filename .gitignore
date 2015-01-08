@@ -52,6 +52,9 @@ $RECYCLE.BIN/
 logs
 *.log
 
+# Temp files
+.tmp
+
 # Runtime data
 pids
 *.pid
@@ -87,10 +90,6 @@ bower_components
 
 ####
 
-dist
-.tmp
 .sass-cache
-app/bower_components
-*.log
 *.sql
 *.sqlite
