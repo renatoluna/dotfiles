@@ -88,8 +88,11 @@ dist
 *.js.map
 bower_components
 
+## DB ##
+
+*.sql
+*.sqlite
+
 ####
 
 .sass-cache
-*.sql
-*.sqlite
