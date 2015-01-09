@@ -8,8 +8,9 @@
 [url "https://"]
     insteadOf = git://
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+	clean = git media clean %f
+	smudge = git media smudge %f
+	required = true
 [color]
     branch = auto
     diff = auto
@@ -47,5 +48,8 @@
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     # Delete all local branches merged into master
     purge = !"git branch -d $(git branch --merged master | grep -v -e '*' -e 'master')"
+    change = "!f() { INITAL='[';BRANCH=$(git rev-parse --abbrev-ref HEAD);FINAL='] ';JIRA_TITLE=$(curl -G -s -k -u cad_rfreire:$j4$7j8@ https://jira.intranet.uol.com.br/jira/rest/api/latest/issue/$BRANCH.json | awk -Fsummary'\":\"' {'print $2'} | awk -F'\",' {'print $1'});SPACER=' : ';USER_MESSAGE=$1;MESSAGE=$INITAL$BRANCH$FINAL$JIRA_TITLE$SPACER$USER_MESSAGE; echo \"$MESSAGE\"; }; f"
 [credential]
     helper = osxkeychain
+[http]
+    sslVerify = false
