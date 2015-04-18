@@ -30,49 +30,9 @@ snippet pvt
 	};
 # JS Class
 snippet CLASS
-	(function ($super) {
-		function ${3:Class} () {
-			var $private = {};
-			var $protected = this;
-			var $public = $protected;
+	function ${3:Class} () {
+		var $private = {};
+		var $public = this;
 
-			${4://Privates and Publics...}
-
-			return $protected;
-		}
-
-		$super.${3:Class} = function () {
-			return new ${3:Class}();
-		};
-
-		$super.${3:Class}.fn = ${3:Class}.prototype;
-
-		return $super.${3:Class};
-	})(${1:SCOPE}.${2:Module});	
-# JS Modules
-snippet MDL
-	(function ($super)
-		function ${2:Module} () {
-			var $private = {};
-			var $protected = this;
-			var $public = $protected;
-
-			${4://Privates and Publics...}
-
-			return $protected;
-		}
-
-		${1:SCOPE}.${2:Module} = (function () {
-			return new ${2:Module}();
-		})();
-
-		${1:SCOPE}.${2:Module}.fn = ${2:Module}.prototype;
-		
-	)(${1:SCOPE});
-#JS SCOPE
-	(function (window, document, undefined) {
-		var ${1:SCOPE} = ${1:SCOPE} || {};
-		window.${1:SCOPE} = ${1:SCOPE};
-					
-		return window.${1:SCOPE};
-	})(this, document);
+		${4://Privates and Publics...}
+	}
