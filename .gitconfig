@@ -48,7 +48,7 @@
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     # Delete all local branches merged into master
     purge = !"git branch -d $(git branch --merged master | grep -v -e '*' -e 'master')"
-    change = "!f() { INITAL='[';BRANCH=$(git rev-parse --abbrev-ref HEAD);FINAL='] ';JIRA_TITLE=$(curl -G -s -k -u rfreire:fOssil!4321@ https://jira.intranet.uol.com.br/jira/rest/api/latest/issue/$BRANCH.json | awk -Fsummary'\":\"' {'print $2'} | awk -F'\",' {'print $1'});SPACER=' : ';USER_MESSAGE=$1;MESSAGE=$INITAL$BRANCH$FINAL$JIRA_TITLE$SPACER$USER_MESSAGE; echo \"$MESSAGE\"; }; f"
+    change = "!f() { INITAL='[';BRANCH=$(git rev-parse --abbrev-ref HEAD);FINAL='] ';JIRA_TITLE=$(curl -G -s -k -u %USER%:%PASSWORD%@ https://jira.intranet.uol.com.br/jira/rest/api/latest/issue/$BRANCH.json | awk -Fsummary'\":\"' {'print $2'} | awk -F'\",' {'print $1'});SPACER=' : ';USER_MESSAGE=$1;MESSAGE=$INITAL$BRANCH$FINAL$JIRA_TITLE$SPACER$USER_MESSAGE; echo \"$MESSAGE\"; }; f"
     recoverFile = "!f() { FILEPATH=$1;COMMITSHA=$(git rev-list -n 1 HEAD -- $FILEPATH);git checkout $COMMITSHA~1 $FILEPATH; }; f"
 [credential]
     helper = osxkeychain
