@@ -8,4 +8,5 @@ cd;
 rm -rf snipmate.vim;
 git clone https://github.com/msanders/snipmate.vim.git;
 cd snipmate.vim; cp -R * ~/.vim;
+cp snippets/javascript.snippets ~/.vim/snippets/javascript.snippets
 cd;
