@@ -52,6 +52,8 @@ colorscheme Monokai
 set splitbelow
 set splitright
 set mouse=a
+" Decent folding
+set foldmethod=indent
 " Tabs, the right way
 set tabstop=4
 set shiftwidth=4
