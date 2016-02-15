@@ -48,6 +48,10 @@ set magic
 set encoding=utf8
 set autoread
 colorscheme Monokai
+" Splitting
+set splitbelow
+set splitright
+set mouse=a
 " Tabs, the right way
 set tabstop=4
 set shiftwidth=4
