@@ -72,6 +72,8 @@ set showcmd
 filetype indent on
 set lazyredraw
 set showmatch
+" Show invisible characters
+" set list 
 " search
 set ignorecase
 set smartcase
@@ -83,7 +85,7 @@ set foldlevelstart=10
 set foldnestmax=10
 " space to open/close folders
 nnoremap <space> za
-" Turn backup off, since most stuff is in SVN, git et.c anyway...
+" Turn backup off
 set nobackup
 set nowb
 set noswapfile
