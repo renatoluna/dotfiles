@@ -34,9 +34,22 @@
     df = diff
     dfs = diff --stat
     ci = commit
+    cia = commit -a
+    cama = commit --amend -a
+    cl = clean
+    cldf = clean -df
+    res = reset
+    resa = reset HEAD
+    branches = branch -a
+    tags = tag
+    stashes = stash list
+    unstage = reset -q HEAD --
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
     changed = show --pretty="format:" --name-only
     lg = log --graph  --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative
     lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    filelog = log -u
     last = log -1 HEAD
     la = "!git config -l | grep alias | cut -c 7-"
     ours = "!f() { git co --ours $@ && git add $@; }; f"
