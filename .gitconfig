@@ -34,9 +34,22 @@
     df = diff
     dfs = diff --stat
     ci = commit
+    cia = commit -a
+    cama = commit --amend -a
+    cl = clean
+    cldf = clean -df
+    res = reset
+    resa = reset HEAD
+    branches = branch -a
+    tags = tag
+    stashes = stash list
+    unstage = reset -q HEAD --
+    discard = checkout --
+    uncommit = reset --mixed HEAD~
     changed = show --pretty="format:" --name-only
     lg = log --graph  --pretty=format:'%C(bold red)%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)%an%Creset' --abbrev-commit --date=relative
     lga = log --graph --decorate --pretty=oneline --abbrev-commit --all
+    filelog = log -u
     last = log -1 HEAD
     la = "!git config -l | grep alias | cut -c 7-"
     ours = "!f() { git co --ours $@ && git add $@; }; f"
@@ -48,7 +61,6 @@
     whatis = show -s --pretty='tformat:%h (%s, %ad)' --date=short
     # Delete all local branches merged into master
     purge = !"git branch -d $(git branch --merged master | grep -v -e '*' -e 'master')"
-    change = "!f() { INITAL='[';BRANCH=$(git rev-parse --abbrev-ref HEAD);FINAL='] ';JIRA_TITLE=$(curl -G -s -k -u %USER%:%PASSWORD%@ https://jira.intranet.uol.com.br/jira/rest/api/latest/issue/$BRANCH.json | awk -Fsummary'\":\"' {'print $2'} | awk -F'\",' {'print $1'});SPACER=' : ';USER_MESSAGE=$1;MESSAGE=$INITAL$BRANCH$FINAL$JIRA_TITLE$SPACER$USER_MESSAGE; echo \"$MESSAGE\"; }; f"
     recoverFile = "!f() { FILEPATH=$1;COMMITSHA=$(git rev-list -n 1 HEAD -- $FILEPATH);git checkout $COMMITSHA~1 $FILEPATH; }; f"
 [credential]
     helper = osxkeychain
