@@ -21,11 +21,13 @@
     # Detect whitespace errors when applying a patch
     whitespace = fix
 [core]
-    whitespace = space-before-tab,indent-with-non-tab,trailing-space
+    whitespace = space-before-tab,indent-ith-non-tab,trailing-space
     ui = auto
 [alias]
+    it = "!git init && git commit -m “root” --allow-empty"
     amend = commit --amend
     ammend = amend
+    commend = commit --amend --no-edit
     undopush = push -f origin HEAD^:master
     unchanged = git update-index --assume-unchanged
     st = status
