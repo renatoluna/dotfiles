@@ -56,3 +56,25 @@ snippet getter
 			$private.$2 = $2;
 		}
 	};
+
+#Jasmine
+# Describe
+snippet desc
+	describe('${1:description}', function () {
+		${2:// body...}
+	});
+# It
+snippet it
+	it('${1:description}', function () {
+		${2:// body...}
+	});
+# BeforeEach
+snippet bef
+	beforeEach(function () {
+		${2:// body...}
+	});
+# AfterEach
+snippet aft
+	afterEach(function () {
+		${2:// body...}
+	});
