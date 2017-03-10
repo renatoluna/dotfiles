@@ -19,6 +19,7 @@ alias .7='cd ../../../../../../..'
 alias .8='cd ../../../../../../../..'
 alias .9='cd ../../../../../../../../..'
 # GIT #
+alias gt='git'
 alias got='git'
 alias gut='git'
 alias gits='git'
