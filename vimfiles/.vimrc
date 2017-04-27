@@ -27,6 +27,8 @@ Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'digitaltoad/vim-pug'
+Plugin 'sjl/gundo.vim'
+
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
