@@ -25,6 +25,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'maksimr/vim-jsbeautify'
 Plugin 'digitaltoad/vim-pug'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -108,3 +109,11 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_javascript_checkers = ['jshint']
 " Pretty JSON
 com! FormatJSON %!python -m json.tool
+" JS Beautify
+map <c-f> :call JsBeautify()<cr>
+" or
+autocmd FileType javascript noremap <buffer>  <c-f> :call JsBeautify()<cr>
+" for html
+autocmd FileType html noremap <buffer> <c-f> :call HtmlBeautify()<cr>
+" for css or scss
+autocmd FileType css noremap <buffer> <c-f> :call CSSBeautify()<cr>
