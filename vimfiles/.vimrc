@@ -28,6 +28,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'maksimr/vim-jsbeautify'
 Plugin 'digitaltoad/vim-pug'
 Plugin 'sjl/gundo.vim'
+Plugin 'tpope/vim-fugitive'
+Plugin 'christoomey/vim-conflicted'
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
