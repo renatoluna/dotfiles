@@ -43,3 +43,7 @@ GIT_PROMPT_ONLY_IN_REPO=1
 # The original version is saved in .bash_profile.pysave
 PATH="/Library/Frameworks/Python.framework/Versions/3.5/bin:${PATH}"
 export PATH
+
+function __mostUsed () {
+    history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
+}
