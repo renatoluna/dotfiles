@@ -47,3 +47,7 @@ export PATH
 function __mostUsed () {
     history | awk '{a[$2]++}END{for(i in a){print a[i] " " i}}' | sort -rn | head
 }
+
+function downloadJson () {
+    json=$(curl -H "Accept: application/json" -H "Content-Type: application/json" -X GET $1 | python -mjson.tool > $2.json);
+}
