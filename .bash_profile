@@ -51,3 +51,7 @@ function __mostUsed () {
 function downloadJson () {
     json=$(curl -H "Accept: application/json" -H "Content-Type: application/json" -X GET $1 | python -mjson.tool > $2.json);
 }
+
+function purgeRemote() {
+    git br -a  | grep remotes | awk -F "/" '/1/ {print ":"$3}' | xargs git push origin
+}
