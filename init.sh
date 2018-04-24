@@ -5,3 +5,5 @@ ln -s ~/Pessoal/dotfiles/vimfiles/.vimrc .
 ln -s ~/Pessoal/dotfiles/vimfiles/snippets/ .
 ln -fs ~/Pessoal/dotfiles/.bash_profile .
 ln -fs ~/Pessoal/dotfiles/.bash_aliases .
+ln -fs ~/Pessoal/dotfiles/.gitconfig .
+ln -fs ~/Pessoal/dotfiles/.gitignore .
