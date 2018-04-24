@@ -7,3 +7,7 @@ ln -fs ~/Pessoal/dotfiles/.bash_profile .
 ln -fs ~/Pessoal/dotfiles/.bash_aliases .
 ln -fs ~/Pessoal/dotfiles/.gitconfig .
 ln -fs ~/Pessoal/dotfiles/.gitignore .
+curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | bash
+reload
+nvm install node
+nvm use node
