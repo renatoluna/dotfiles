@@ -11,3 +11,6 @@ curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.9/install.sh | b
 reload
 nvm install node
 nvm use node
+npm install -g yarn
+npm install -g grunt-cli
+npm install -g gulp-cli
