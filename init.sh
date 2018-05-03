@@ -1,5 +1,6 @@
 cd ~
 git clone https://github.com/magicmonty/bash-git-prompt.git .bash-git-prompt
+/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 ln -s ~/Pessoal/dotfiles/vimfiles/.vimrc .
 ln -s ~/Pessoal/dotfiles/vimfiles/snippets/ .
