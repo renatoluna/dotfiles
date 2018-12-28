@@ -71,5 +71,10 @@
     recoverFile = "!f() { FILEPATH=$1;COMMITSHA=$(git rev-list -n 1 HEAD -- $FILEPATH);git checkout $COMMITSHA~1 $FILEPATH; }; f"
 [credential]
     helper = osxkeychain
-[http]
-    sslVerify = false
+#[http]
+#    sslVerify = false
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
