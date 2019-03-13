@@ -35,7 +35,7 @@ function __show_colors () {
 # No Color
 NC='\e[0m'
 
-PS1=''"${Cya}$USER${NS}"' '"${Gre}@ \w${NC}"' $(__git_ps1 "(${Yel}%s${NC}${Red}${NC}) ") \n\$ '
+# PS1=''"${Cya}$USER${NS}"' '"${Gre}@ \w${NC}"' $(__git_ps1 "(${Yel}%s${NC}${Red}${NC}) ") \n\$ '
 source ~/.bash-git-prompt/gitprompt.sh
 GIT_PROMPT_ONLY_IN_REPO=1
 
@@ -55,3 +55,11 @@ function downloadJson () {
 function purgeRemote() {
     git br -a  | grep remotes | awk -F "/" '/1/ {print ":"$3}' | xargs git push origin
 }
+
+[ -f /usr/local/etc/bash_completion ] && . /usr/local/etc/bash_completion
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export LANG=en_U
